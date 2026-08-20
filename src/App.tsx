@@ -14,8 +14,6 @@ import AboutSection from './components/AboutSection';
 import { MarqueeText } from './components/MarqueeText';
 import { GionatanDock } from './components/GionatanDock';
 import { GravityStarsBackground } from './components/GravityStarsBackground';
-import { ChromaGrid } from './components/ChromaGrid';
-import { Stack } from './components/Stack';
 
 function App() {
   const [selectedBike, setSelectedBike] = useState<BikeData>(BIKES[0]);
@@ -81,6 +79,9 @@ function App() {
 
     const listImg = new Image();
     listImg.src = '/assets/lifestyle_hero.jpg';
+
+    // Reset scroll viewport to top on load
+    window.scrollTo({ top: 0, left: 0 });
   }, []);
 
   const handleBikeSelect = (bike: BikeData) => {
@@ -226,88 +227,7 @@ function App() {
           />
         </div>
 
-        {/* Creative Assembly Studio / Team Showcase */}
-        {isFolderUnlocked && (
-          <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-20 border-t border-white/5 relative z-10 text-left">
-            <span className="text-[10px] tracking-[0.2em] text-slate-500 uppercase font-semibold mb-8 block">
-              Assembly Studio
-            </span>
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
-              <div className="max-w-xl">
-                <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white uppercase leading-none font-display mb-4">
-                  CREATIVE CREW
-                </h2>
-                <p className="text-slate-400 text-sm font-light leading-relaxed">
-                  The designers, engineers, and software architects behind the Vinura Cycles cybernetic ecosystem.
-                </p>
-              </div>
 
-              {/* Interactive Photos Stack (from user prompt) */}
-              <div className="w-52 h-52 relative flex-shrink-0 mr-4">
-                <Stack
-                  randomRotation={true}
-                  sensitivity={180}
-                  sendToBackOnClick={true}
-                  cards={[
-                    "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format",
-                    "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=500&auto=format",
-                    "https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format",
-                    "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format"
-                  ].map((src, i) => (
-                    <img 
-                      key={i} 
-                      src={src} 
-                      alt={`card-${i + 1}`} 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                      className="rounded-xl pointer-events-none select-none"
-                    />
-                  ))}
-                />
-              </div>
-            </div>
-            <ChromaGrid 
-              items={[
-                {
-                  image: "https://github.com/VenkatAsrith.png",
-                  title: "Venkat Asrith",
-                  subtitle: "Lead Developer & Designer",
-                  handle: "@venkatasrith",
-                  borderColor: "#D47844",
-                  gradient: "linear-gradient(135deg, #D47844, #000)",
-                  url: "https://github.com/VenkatAsrith"
-                },
-                {
-                  image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
-                  title: "Sarah Johnson",
-                  subtitle: "Creative Director",
-                  handle: "@sarahjohnson",
-                  borderColor: "#06B6D4",
-                  gradient: "linear-gradient(135deg, #06B6D4, #000)",
-                  url: "https://github.com/sarahjohnson"
-                },
-                {
-                  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-                  title: "Mike Chen",
-                  subtitle: "Powertrain Engineer",
-                  handle: "@mikechen",
-                  borderColor: "#EF4444",
-                  gradient: "linear-gradient(135deg, #EF4444, #000)",
-                  url: "https://linkedin.com/in/mikechen"
-                },
-                {
-                  image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
-                  title: "Alex Rivera",
-                  subtitle: "Software Architect",
-                  handle: "@alexrivera",
-                  borderColor: "#EAB308",
-                  gradient: "linear-gradient(135deg, #EAB308, #000)",
-                  url: "#"
-                }
-              ]}
-              radius={280}
-            />
-          </div>
-        )}
 
         {/* Brand Footer */}
         <Footer onScrollToTop={() => handleNavigate('hero')} />

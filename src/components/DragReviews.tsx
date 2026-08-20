@@ -90,9 +90,17 @@ const DragCard: React.FC<CardProps> = ({
 
 export const DragReviews: React.FC<DragReviewsProps> = ({ reviews, accentColor }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Staggered starter coordinates for 6 cards
-  const placements = [
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const checkSize = () => setIsMobile(window.innerWidth < 768);
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+
+  const desktopPlacements = [
     { top: "10%", left: "5%", rotate: "-6deg" },
     { top: "15%", left: "38%", rotate: "8deg" },
     { top: "8%", left: "68%", rotate: "-4deg" },
@@ -100,6 +108,15 @@ export const DragReviews: React.FC<DragReviewsProps> = ({ reviews, accentColor }
     { top: "54%", left: "40%", rotate: "-8deg" },
     { top: "48%", left: "70%", rotate: "16deg" },
   ];
+
+  const mobilePlacements = [
+    { top: "6%", left: "4%", rotate: "-4deg" },
+    { top: "34%", left: "10%", rotate: "5deg" },
+    { top: "62%", left: "6%", rotate: "-3deg" },
+  ];
+
+  const placements = isMobile ? mobilePlacements : desktopPlacements;
+  const cardsLimit = isMobile ? 3 : 6;
 
   return (
     <div 
@@ -118,7 +135,7 @@ export const DragReviews: React.FC<DragReviewsProps> = ({ reviews, accentColor }
         ★ Arrange / Drag feedback tiles anywhere
       </div>
 
-      {reviews.slice(0, 6).map((review, idx) => {
+      {reviews.slice(0, cardsLimit).map((review, idx) => {
         const placement = placements[idx] || placements[0];
         return (
           <DragCard
