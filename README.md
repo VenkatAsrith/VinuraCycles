@@ -2,12 +2,12 @@
 
 An industry-level, highly interactive, premium electric bicycle showcase landing page designed and developed for demonstration and practice purposes. Inspired by the award-winning creative interfaces of **[gionatannese.com](https://www.gionatannese.com/)** and high-end interactive product layouts.
 
-## 🔗 Live Demo
+##  Live Demo
 * **Deployment Preview**: `https://vinuracycles.vercel.app` (Placeholder / Replace with active deploy URL)
 
 ---
 
-## 🛠️ Tech Stack & Key Libraries
+## Tech Stack & Key Libraries
 
 This project is built using a modern, fast, and strictly-typed frontend stack:
 
@@ -21,7 +21,7 @@ This project is built using a modern, fast, and strictly-typed frontend stack:
 
 ---
 
-## ✨ Key Interactive Features
+##  Key Interactive Features
 
 ### 1. Brand Logo Shared-Layout FLIP Transition
 Upon loader completion, the central `"VINURA CYCLES"` brand text morphs, translates, and scales down dynamically into the top-left corner of the header, becoming the Navbar Logo itself using Framer Motion `layoutId`.
@@ -50,7 +50,7 @@ Four design snapshots are arranged in a rotation deck stack. Clicking the top ca
 
 ---
 
-## 🚀 Getting Started Locally
+##  Getting Started Locally
 
 Follow these steps to spin up the local development environment:
 
@@ -83,6 +83,6 @@ Follow these steps to spin up the local development environment:
 
 ---
 
-## 🎨 Creative Credits & Disclaimer
+##  Creative Credits & Disclaimer
 *   **Design & Development**: Designed and Developed by **[VenkatAsrith](https://github.com/VenkatAsrith)**.
 *   **Disclaimer**: This project is built for **practice and demonstration purposes only**. Asset graphics and mockup visual parameters belong to their respective creators.
