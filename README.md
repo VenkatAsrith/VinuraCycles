@@ -3,7 +3,7 @@
 An industry-level, highly interactive, premium electric bicycle showcase landing page designed and developed for demonstration and practice purposes. Inspired by the award-winning creative interfaces of **[gionatannese.com](https://www.gionatannese.com/)** and high-end interactive product layouts.
 
 ##  Live Demo
-* **Deployment Preview**: `https://vinuracycles.sunnykdd29.workers.dev/` (Placeholder / Replace with active deploy URL)
+* **Deployment Preview**: [https://vinuracycles.sunnykdd29.workers.dev/](https://vinuracycles.sunnykdd29.workers.dev/)
 
 ---
 
