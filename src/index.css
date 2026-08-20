@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #05070C;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+/* Custom glow utility effects */
+.glow-copper {
+  box-shadow: 0 0 40px rgba(212, 120, 68, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.15);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 40px rgba(234, 179, 8, 0.15);
+}
+
+.glow-red {
+  box-shadow: 0 0 40px rgba(239, 68, 68, 0.15);
+}
+
+.glow-silver {
+  box-shadow: 0 0 40px rgba(148, 163, 184, 0.15);
+}
+
+.text-glow-copper {
+  text-shadow: 0 0 10px rgba(212, 120, 68, 0.5);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.text-glow-yellow {
+  text-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.text-glow-silver {
+  text-shadow: 0 0 10px rgba(148, 163, 184, 0.5);
+}
+
+/* Restrained premium glassmorphism classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Subtle grid background pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+}
+
+/* Starfield Background Styles (from Uiverse.io) */
+.starfield-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    501px 811px #fff, 1450px 1324px #fff, 1093px 1780px #fff, 1469px 678px #fff,
+    904px 741px #fff, 1160px 781px #fff, 1841px 1962px #fff, 1630px 1667px #fff,
+    1788px 676px #fff, 367px 1734px #fff, 1343px 156px #fff, 1283px 1142px #fff,
+    1062px 378px #fff, 1395px 467px #fff, 1017px 1891px #fff, 137px 1114px #fff;
+  animation: animStar 70s linear infinite;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    501px 811px #fff, 1450px 1324px #fff, 1093px 1780px #fff, 1469px 678px #fff,
+    904px 741px #fff, 1160px 781px #fff, 1841px 1962px #fff, 1630px 1667px #fff,
+    1788px 676px #fff, 367px 1734px #fff, 1343px 156px #fff, 1283px 1142px #fff,
+    1062px 378px #fff, 1395px 467px #fff, 1017px 1891px #fff, 137px 1114px #fff;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    1925px 1320px #fff, 693px 1778px #fff, 1016px 711px #fff, 1171px 563px #fff,
+    661px 1919px #fff, 1610px 44px #fff, 1275px 140px #fff, 1208px 1802px #fff,
+    1473px 1587px #fff, 11px 1117px #fff, 853px 1757px #fff, 1149px 937px #fff;
+  animation: animStar 120s linear infinite;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    1925px 1320px #fff, 693px 1778px #fff, 1016px 711px #fff, 1171px 563px #fff,
+    661px 1919px #fff, 1610px 44px #fff, 1275px 140px #fff, 1208px 1802px #fff,
+    1473px 1587px #fff, 11px 1117px #fff, 853px 1757px #fff, 1149px 937px #fff;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow:
+    200px 981px #fff, 1731px 521px #fff, 132px 1039px #fff, 1888px 1547px #fff,
+    899px 1226px #fff, 1887px 580px #fff, 1548px 1092px #fff, 1626px 689px #fff;
+  animation: animStar 180s linear infinite;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow:
+    200px 981px #fff, 1731px 521px #fff, 132px 1039px #fff, 1888px 1547px #fff,
+    899px 1226px #fff, 1887px 580px #fff, 1548px 1092px #fff, 1626px 689px #fff;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+/* Double-Glow Card Styles (from Uiverse.io by Tiagoadag) */
+.uiverse-glow-card {
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  background-image: linear-gradient(163deg, var(--bike-accent, #D47844) 0%, #3700ff 100%);
+}
+
+.uiverse-glow-card-inner {
+  background-color: #0d111a;
+  border-radius: 19px;
+  transition: all 0.2s ease;
+}
+
+.uiverse-glow-card-inner:hover {
+  transform: scale(0.985);
+}
+
+.uiverse-glow-card:hover {
+  box-shadow: 0px 0px 30px 2px rgba(var(--bike-accent-rgb, 212, 120, 68), 0.35);
+}
+
+/* Uiverse Word-Loop Loader Styles */
+.word-loop-card {
+  --bg-color: #05070C;
+  background-color: var(--bg-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.word-loop-loader {
+  color: rgb(148, 163, 184);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.word-loop-words {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.word-loop-words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+  pointer-events: none;
+}
+
+.word-loop-word {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 6px;
+  font-weight: 800;
+  animation: spin_words 8s infinite;
+}
+
+@keyframes spin_words {
+  0%, 15% {
+    transform: translateY(0);
+  }
+  20%, 35% {
+    transform: translateY(-24px);
+  }
+  40%, 55% {
+    transform: translateY(-48px);
+  }
+  60%, 75% {
+    transform: translateY(-72px);
+  }
+  80%, 95% {
+    transform: translateY(-96px);
+  }
+  100% {
+    transform: translateY(-120px);
+  }
+}
+
+/* 3D Tech Folder Pseudo Dynamic Backing */
+.tech-folder-back::after,
+.tech-folder-back::before {
+  background-color: var(--folder-accent, #D47844) !important;
+}
+
+.tech-folder-front::after,
+.tech-folder-front::before {
+  background-color: var(--folder-accent-front, #f48c55) !important;
+}
+
+
+
